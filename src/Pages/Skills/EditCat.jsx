@@ -18,7 +18,7 @@ const EditCat = () => {
   const [children, setChildren] = useState([]);
 
   const [selectedGrandParent, setSelectedGrandParent] = useState("");
-
+const [description, setDescription] = useState("");
   const [selectedChild, setSelectedChild] = useState("");
 const [allCategories, setAllCategories] = useState([]);
 const [selectedParent, setSelectedParent] = useState("");
@@ -78,6 +78,7 @@ useEffect(() => {
       setName(category.name);
       setPreview(category.image || "");
       setSelectedParent(category.parent || "");
+      setDescription(category.description || "");
 
       // Build flattened category list with levels
       const buildTree = (cats, parent = null, level = 0) =>
@@ -134,6 +135,7 @@ useEffect(() => {
     try {
       const formData = new FormData();
       formData.append("name", name);
+      formData.append("description", description);
 
       // Determine correct parent
       let finalParent = null;
@@ -178,6 +180,16 @@ useEffect(() => {
               className="border px-4 py-2 rounded-md w-full"
             />
           </div>
+          <div>
+  <label className="block mb-2 font-medium">Description</label>
+  <textarea
+    value={description}
+    onChange={(e) => setDescription(e.target.value)}
+    placeholder="Category description..."
+    rows={4}
+    className="border px-4 py-2 rounded-md w-full resize-y"
+  />
+</div>
 
           {/* <div>
             <label className="block mb-1 font-medium">Grandparent Category</label>
