@@ -68,7 +68,15 @@ const AdminHeader = () => {
             className="hover:text-primary"
             style={{ color: "black" }}
           >
-            Order
+            Orders
+          </a>
+      
+          <a
+            href="/bookings"
+            className="hover:text-primary"
+            style={{ color: "black" }}
+          >
+            Bookings
           </a>
       
         </nav>
@@ -125,6 +133,9 @@ const AdminHeader = () => {
           </a>
           <a href="/orders" className="block" onClick={handleCloseMenu}>
             Orders
+          </a>
+          <a href="/bookings" className="block" onClick={handleCloseMenu}>
+            Bookings
           </a>
       
         </nav>

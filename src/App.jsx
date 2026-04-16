@@ -17,6 +17,8 @@ import BrandList from "./Pages/brands/BrandList";
 import CreateBrand from "./Pages/brands/CreateBrand";
 import EditCat from "./Pages/Skills/EditCat";
 import EditProduct from "./Pages/products/EditProduct";
+import BookingList from "./Pages/Booking/Booking";
+import BookingDetails from "./Pages/Booking/BookingDetails";
 
 
 const router = createBrowserRouter([
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
   {
     path: "/orders",
     element: <OrderList />,
+  },
+  {
+    path: "/bookings",
+    element: <BookingList />,
+  },
+  {
+    path: "/booking-details",
+    element: <BookingDetails />,
   },
   {
     path: "/brands",
