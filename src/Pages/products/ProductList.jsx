@@ -100,8 +100,8 @@ const ProductList = () => {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Weight / Unit</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Qty Available</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price (₦)</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Original Price (₦)</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price (£)</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Original Price (£)</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Highlights</th>
                 <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
               </tr>
@@ -148,13 +148,13 @@ const ProductList = () => {
 
                   {/* Current Price */}
                   <td className="px-6 py-4 text-sm text-gray-900 font-semibold">
-                    ₦{product.price?.toLocaleString()}
+                    £{product.price?.toLocaleString()}
                   </td>
 
                   {/* Original Price */}
                   <td className="px-6 py-4 text-sm text-gray-400">
                     {product.originalPrice
-                      ? <span className="line-through">₦{product.originalPrice?.toLocaleString()}</span>
+                      ? <span className="line-through">£{product.originalPrice?.toLocaleString()}</span>
                       : "—"}
                   </td>
 

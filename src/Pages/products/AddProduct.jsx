@@ -164,7 +164,7 @@ const AddProduct = () => {
 
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block font-medium mb-1">Price (₦)</label>
+            <label className="block font-medium mb-1">Price (£)</label>
             <input type="number" value={productPrice} onChange={(e) => setProductPrice(e.target.value)}
               className="w-full p-2 border rounded" />
           </div>
